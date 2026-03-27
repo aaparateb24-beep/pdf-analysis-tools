@@ -1,0 +1,27 @@
+body {
+    font-family: Arial;
+    margin: 40px;
+    background-color: #f5f5f5;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.found {
+    color: green;
+    font-weight: bold;
+}
+
+.not-found {
+    color: red;
+    font-weight: bold;
+}

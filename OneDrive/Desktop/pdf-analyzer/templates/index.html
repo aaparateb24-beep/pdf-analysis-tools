@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Analysis Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>📄 PDF Analysis Tool</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="pdf" required><br><br>
+
+    <input type="text" name="keyword" placeholder="Enter keyword to search"><br><br>
+
+    <button type="submit">Analyze PDF</button>
+</form>
+
+<hr>
+
+<h2>📄 Extracted Text:</h2>
+<p>{{ text }}</p>
+
+<h2>🧠 AI Summary:</h2>
+<p>{{ summary }}</p>
+
+<h2>🔍 Keyword Result:</h2>
+{% if keyword_result == True %}
+    <p class="found">Keyword FOUND in document</p>
+{% elif keyword_result == False %}
+    <p class="not-found">Keyword NOT found</p>
+{% endif %}
+
+<h2>📊 Document Insights:</h2>
+<p>Word Count: {{ word_count }}</p>
+<p>Estimated Reading Time: {{ reading_time }} minute(s)</p>
+
+</body>
+</html>
