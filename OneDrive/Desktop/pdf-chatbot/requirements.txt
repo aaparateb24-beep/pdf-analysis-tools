@@ -1,5 +1,7 @@
-langchain
-openai
+fastapi
+uvicorn
+pdfplumber
+sentence-transformers
 faiss-cpu
-pypdf
-streamlit
+langchain-text-splitters
+python-multipart
